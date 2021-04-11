@@ -43,8 +43,44 @@ Podemos entrenar los datos historicos para que entreguen resultados para
 ser aplicados al negocio
 
 ### Regresion Lineal
+
+Trabaja con datos del tipo cuantitativos
+
+#### Simple
+
+Algoritmo de aprendizaje supervisado que nos indica la tendencia de un conjunto de datos continuos, modelando las relacion entre una variable dependiente Y y una variable llamada X
+
+Ejemplo Salario / Años de experiencia
+
+  Y
+   |
+   |   /  Yi = b + mXi
+   |  /
+   | /
+   |/
+   |_________ X
+
+* Lo importante es tener variedad de informacion para encontrar una tendencia
+
+#### Multiple
+
+Cuando nuestro problema tiene mas de dos variables se le considera lineal multiple y se trabaja con hiper planos
+
+En nuestro ejemplo seria, ademas de los años de experiencia, tener en cuenta el lenguaje de programacion y/o el pais,
+
 ### Regresion Logistica
 
+Si nuestro dato de salida tiene un valor cualitativo utilizamos y aplicamos la regresion logistica
+
+Por ejemplo imaginemos un modelo que debe decir si una persona tiene o no diabetes
+
+   Y
+  1 |           / 
+    |          /
+    |     ____/
+    |    /
+  0 |___/________ X
+    0          1
 
 ## Sobreajuste (overfiting)
 
