@@ -89,3 +89,43 @@ Es cuando "obligamos" a nuestro modelo a ajustarse a los datos de entrada y sali
 ## Subajuste (underfiting)
 
 El modelo fallara en el reconocimiento por falta de muestras suficientes. Se entreno con un conjunto de datos muy pequeño
+
+## Matriz de confusión
+
+Los modelos de clasificación son capaces de predecir cuál es la etiqueta correspondiente a cada ejemplo o instancia 
+basado en aquello que ha aprendido del conjunto de datos de entrenamiento. Estos modelos necesitan ser evaluados de 
+alguna manera y posteriormente comparar los resultados obtenidos con aquellos que fueron entrenados.
+
+Una manera de hacerlo es mediante la matriz de confusión la cual nos permite evaluar el desempeño de un algoritmo de 
+clasificación a partir del conteo de los aciertos y errores en cada una de las clases del algoritmo.
+
+|------------------------------------------------|
+|   |           |           Prediccion           |
+|   |           |  Postivios    |  Negativos     |
+|------------------------------------------------|
+| O |           | Verdaderos    | Falsos         | 
+| b | Positivos | positivos     | Negativos      |
+| s |           | (VP)          | (FN)           |
+| e |-----------|--------------------------------|
+| r |           | Falsos        | Verdaderos     | 
+| v | Negativos | Positivos     | Negativos      |
+| . |           | (FP)          | (VN)           |
+|------------------------------------------------|
+
+
+### Los verdaderos positivos (VP) 
+> son aquellos que fueron clasificados correctamente como positivos como el modelo.
+### Los verdaderos negativos (VN) 
+> corresponden a la cantidad de negativos que fueron clasificados correctamente como negativos por el modelo.
+### Los falsos negativos (FN) 
+> es la cantidad de positivos que fueron clasificados incorrectamente como negativos.
+### Los falsos positivos (FP) 
+> indican la cantidad de negativos que fueron clasificados incorrectamente como negativos.
+
+#### Exactitud
+
+Exactitud = (VP + VN) / Total
+
+#### Tasa de error
+
+Tasa de error = (FP + FN) / Total
