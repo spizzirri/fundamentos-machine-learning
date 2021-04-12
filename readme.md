@@ -46,12 +46,12 @@ ser aplicados al negocio
 
 Trabaja con datos del tipo cuantitativos
 
-#### Simple
+#### _Simple_
 
 Algoritmo de aprendizaje supervisado que nos indica la tendencia de un conjunto de datos continuos, modelando las relacion entre una variable dependiente Y y una variable llamada X
 
 Ejemplo Salario / Años de experiencia
-
+```
   Y
    |
    |   /  Yi = b + mXi
@@ -60,9 +60,11 @@ Ejemplo Salario / Años de experiencia
    |/
    |_________ X
 
+```
+
 * Lo importante es tener variedad de informacion para encontrar una tendencia
 
-#### Multiple
+#### _Multiple_
 
 Cuando nuestro problema tiene mas de dos variables se le considera lineal multiple y se trabaja con hiper planos
 
@@ -74,6 +76,7 @@ Si nuestro dato de salida tiene un valor cualitativo utilizamos y aplicamos la r
 
 Por ejemplo imaginemos un modelo que debe decir si una persona tiene o no diabetes
 
+```
    Y
   1 |           / 
     |          /
@@ -81,6 +84,7 @@ Por ejemplo imaginemos un modelo que debe decir si una persona tiene o no diabet
     |    /
   0 |___/________ X
     0          1
+```
 
 ## Sobreajuste (overfiting)
 
@@ -99,9 +103,10 @@ alguna manera y posteriormente comparar los resultados obtenidos con aquellos qu
 Una manera de hacerlo es mediante la matriz de confusión la cual nos permite evaluar el desempeño de un algoritmo de 
 clasificación a partir del conteo de los aciertos y errores en cada una de las clases del algoritmo.
 
+```
 |------------------------------------------------|
 |   |           |           Prediccion           |
-|   |           |  Postivios    |  Negativos     |
+|   |           |  Postivios     |  Negativos    |
 |------------------------------------------------|
 | O |           | Verdaderos    | Falsos         | 
 | b | Positivos | positivos     | Negativos      |
@@ -111,7 +116,7 @@ clasificación a partir del conteo de los aciertos y errores en cada una de las 
 | v | Negativos | Positivos     | Negativos      |
 | . |           | (FP)          | (VN)           |
 |------------------------------------------------|
-
+```
 
 ### Los verdaderos positivos (VP) 
 > son aquellos que fueron clasificados correctamente como positivos como el modelo.
@@ -122,10 +127,10 @@ clasificación a partir del conteo de los aciertos y errores en cada una de las 
 ### Los falsos positivos (FP) 
 > indican la cantidad de negativos que fueron clasificados incorrectamente como negativos.
 
-#### Exactitud
+#### _Exactitud_
 
 Exactitud = (VP + VN) / Total
 
-#### Tasa de error
+#### _Tasa de error_
 
 Tasa de error = (FP + FN) / Total
