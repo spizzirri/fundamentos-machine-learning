@@ -6,6 +6,9 @@ import numpy as np
 from sklearn import tree
 from sklearn.model_selection import train_test_split
 from sklearn import preprocessing
+from io import StringIO
+from IPython.display import Image, display
+import pydotplus
 #sns.set()
 
 test_df = pd.read_csv('../archivos/titanic-test.csv')
@@ -82,3 +85,15 @@ tree_one = tree_one.fit(X_features_one, y_target)
 
 tree_one_accuracy = round(tree_one.score(X_features_one, y_target), 4)
 print('Accuracy: %0.4f' %(tree_one_accuracy))
+
+
+"""
+Veamos graficamente como es que se genero el arbol
+"""
+
+out = StringIO()
+# Generaremos un archivo con la imagen del arbol
+tree.export_graphviz(tree_one, out_file = out)
+
+graph = pydotplus.graph_from_dot_data(out.getvalue())
+graph.write_png('../archivos/titanic.png')
