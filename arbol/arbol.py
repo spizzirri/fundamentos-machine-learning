@@ -64,3 +64,21 @@ print(train_predictors.head(3))
 
 print("Informacion dummy")
 print(dummy_encoded_train_predictors.head(3))
+
+print("Diversidad de valores columnas Pclass")
+print(train_df['Pclass'].value_counts())
+
+#Valores que queremos lograr predecir
+y_target = train_df['Survived'].values
+
+#Set de datos ya preparados
+X_features_one = dummy_encoded_train_predictors.values
+
+# Con random_state = 1 se indica que cada vez que corra el algoritmo se tome una seccion distinta
+x_train, x_validation, y_train, y_validation = train_test_split(X_features_one, y_target, test_size = 0.25, random_state=1)
+
+tree_one = tree.DecisionTreeClassifier()
+tree_one = tree_one.fit(X_features_one, y_target)
+
+tree_one_accuracy = round(tree_one.score(X_features_one, y_target), 4)
+print('Accuracy: %0.4f' %(tree_one_accuracy))
