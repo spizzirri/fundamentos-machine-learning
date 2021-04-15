@@ -134,3 +134,36 @@ Exactitud = (VP + VN) / Total
 #### _Tasa de error_
 
 Tasa de error = (FP + FN) / Total
+
+## Arboles de decision
+Es una forma grafica y analitica que presenta sucesos y sus posibles consecuencias
+
+```
+              A
+           /     \
+          P       P
+        /   \    /  \  
+       D     P   D   D
+           /   \
+          D     D
+```
+### Ventajas
+
+* Claridad en los datos
+* Tolerante al ruido y valores faltantes
+* Las reglas extraidas permiten hacer predicciones
+
+### Desventajas
+
+* Criterio de division es deficiente
+* Sobreajuste
+* Ramas poco significativas
+
+#### _¿Como se divide un arbol de decision_
+* Ganancia de informacion
+* Dividir en pequeños arboles
+
+#### _Optimizacion del arbol_
+* Evitar sobreajuste
+* Seleccion de atributos que permitan dividir mejor
+* Evitar campos nulos
