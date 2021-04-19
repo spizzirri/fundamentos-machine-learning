@@ -167,3 +167,25 @@ Es una forma grafica y analitica que presenta sucesos y sus posibles consecuenci
 * Evitar sobreajuste
 * Seleccion de atributos que permitan dividir mejor
 * Evitar campos nulos
+
+## K-mean
+
+Es un algoritmo que crea K grupos a partir de un conjunto de observaciones,
+los elementos deben tener similitudes
+
+Ejemplo:
+
+    xxoopp         xx   oo    ppp
+    oooppp         xx   ooo   pppp
+    xxpp
+
+> 1. Seleccionar un valor para K (centroides)
+> 2. Asignamos cada uno de los elementos restantes al centro mas cercano
+> 3. Asignamos cada punto a su centroide mas cercano
+> 4. Repetimos paso 2 y 3 hasta que los centros no se modifiquen
+
+#### _Metodo_del_codo_
+
+* Calcula el agrupamiento para diferentes K
+* El error al cuadrado para cada punto es el cuadrado de la distancia 
+del punto desde su centro
