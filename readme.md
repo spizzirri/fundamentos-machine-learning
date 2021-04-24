@@ -13,6 +13,32 @@ Es cuando el algoritmo es previsto de un conjunto de datos pre etiquetado
 ### Aprendizaje no supervisado
 Es cuando el algoritmo no es previsto de un conjunto de datos pre etiquetado
 
+## ¿Que es el aprendizaje profundo?
+Subcategoria del ML que crea diferentes niveles de abstraccion que representa
+los datos
+
+## Red neuronal convolucional
+Modelan de forma consecutiva pequeñas piezas de informacion, al final combinan
+informacion en las capaz mas profundas de la red
+
+### ¿Que es ReLU?
+Funcion de activicion, permite el paso de todos los valores positivos sin cambiarlos pero asigna todos los valores negativos a 0
+
+```
+         |    /
+         |   /
+         |  /
+         | /
+         |/        
+---------|---------
+           0
+```
+
+#### Tensor Flow
+Biblioteca de codigo abierto desarrollado por Google capaz de construir y 
+entrenar redes neuronales
+
+
 ## Librerias de Python
 * numpy
 
@@ -189,3 +215,10 @@ Ejemplo:
 * Calcula el agrupamiento para diferentes K
 * El error al cuadrado para cada punto es el cuadrado de la distancia 
 del punto desde su centro
+
+
+## Links Utiles
+
+* archive.ics.uci.edu/ml/index.php
+
+* kaggle.com
